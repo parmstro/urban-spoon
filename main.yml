@@ -1,0 +1,7 @@
+---
+- name: Reconfigure system for time sync using chronyd
+  hosts: all
+  
+
+  roles:
+    - chrony

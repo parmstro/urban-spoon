@@ -1,0 +1,4 @@
+[virtual_servers]
+rhvm.parmstrong.ca
+tower.parmstrong.ca
+cfme.parmstrong.ca

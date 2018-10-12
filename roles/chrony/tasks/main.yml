@@ -1,0 +1,33 @@
+---
+# This configures chronyd on a target server
+#
+
+- name: Stop and Disable ntpd if it is running
+  service:
+    name: ntpd
+    enabled: no
+    state: stopped
+
+# -rw-r--r--. root root system_u:object_r:etc_t:s0       /etc/chrony.conf
+# selinux context is user:role:type:level
+- name: Copy the chrony.conf file
+  copy:
+    src: files/chrony.conf
+    dest: /etc/chrony.conf
+    owner: root
+    group: root
+    mode: 0744
+    seuser: system_u
+    serole: object_r
+    setype: etc_t
+    selevel: s0
+
+- name: Enable and Start chronyd
+  service:
+    name: chronyd
+    enabled: yes
+    stated: restarted
+
+- name: Check to ensure the time is being managed
+  command: chronyc tracking
+
