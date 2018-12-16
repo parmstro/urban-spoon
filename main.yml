@@ -1,7 +1,7 @@
 ---
 - name: Reconfigure system for time sync using chronyd
   hosts: all
-  
+  gather_facts: false
 
   roles:
     - chrony
