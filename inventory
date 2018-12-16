@@ -1,4 +1,17 @@
+[physical_servers]
+rhs1.parmstrong.ca
+rhs2.parmstrong.ca
+rhs3.parmstrong.ca
+rhs4.parmstrong.ca
+
 [virtual_servers]
+sat6.parmstrong.ca
 rhvm.parmstrong.ca
 tower.parmstrong.ca
 cfme.parmstrong.ca
+gitlab.parmstrong.ca
+vshpere.parmstrong.ca
+ha1.pamrstrong.ca
+ha2.parmstrong.ca
+idm1.lnx.parmstrong.ca
+idm2.lnx.parsmstrong.ca
